@@ -4,7 +4,6 @@ defmodule FawkesWeb.BlogController do
 
   def index(conn, _params) do
     conn
-    |> put_layout({BlogLayoutView, "app.html"})
     |> render("index.html")
   end
 end
