@@ -1,5 +1,14 @@
 # Fawkes
 
+This is a test app to try to replicate the structure found in [decidim/decidim][decidim] in Phoenix.
+
+Goals:
+
+- [x] The blog layout should extend the base one
+- [ ] The blog code should live outside the app
+
+## Setup
+
 To start your Phoenix server:
 
   * Setup the project with `mix setup`
@@ -7,12 +16,4 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+[decidim]: https://github.com/decidim/decidim
