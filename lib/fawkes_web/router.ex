@@ -9,6 +9,10 @@ defmodule FawkesWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :blog_layout do
+    plug :put_layout, {FawkesWeb.BlogLayoutView, "app.html"}
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -17,7 +21,13 @@ defmodule FawkesWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/blog", BlogController, :index
+  end
+
+  scope "/blog", FawkesWeb do
+    pipe_through :browser
+    pipe_through :blog_layout
+
+    get "/", BlogController, :index
   end
 
   # Other scopes may use custom stacks.
