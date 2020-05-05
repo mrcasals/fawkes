@@ -17,6 +17,7 @@ defmodule FawkesWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/blog", BlogController, :index
   end
 
   # Other scopes may use custom stacks.
