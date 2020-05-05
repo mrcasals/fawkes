@@ -1,7 +1,0 @@
-<%= render_layout FawkesWeb.LayoutView, "app.html", assigns do %>
-  <section class="phx-hero">
-    <h1>Blog layout</h1>
-  </section>
-
-  <%= @inner_content %>
-<% end %>

@@ -1,16 +1,14 @@
 defmodule FawkesWeb.Router do
   use FawkesWeb, :router
 
+  use FawkesBlog.Router
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-  end
-
-  pipeline :blog_layout do
-    plug :put_layout, {FawkesWeb.BlogLayoutView, "app.html"}
   end
 
   pipeline :api do
@@ -23,12 +21,7 @@ defmodule FawkesWeb.Router do
     get "/", PageController, :index
   end
 
-  scope "/blog", FawkesWeb do
-    pipe_through :browser
-    pipe_through :blog_layout
-
-    get "/", BlogController, :index
-  end
+  blog_routes()
 
   # Other scopes may use custom stacks.
   # scope "/api", FawkesWeb do

@@ -44,7 +44,8 @@ defmodule Fawkes.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:fawkes_blog, github: "mrcasals/fawkes_blog"}
     ]
   end
 
